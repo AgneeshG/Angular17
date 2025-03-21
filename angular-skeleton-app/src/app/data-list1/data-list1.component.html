@@ -1,0 +1,26 @@
+<div class="d-flex justify-content-end px-1 py-1">
+
+
+</div>
+
+<div class="d-flex py-1">
+    <div class="px-2">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Actions
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" (click)="getCheckedRows()" class="dropdown-item">Selected Data</a>
+                </li>
+            </ul>
+        </div>
+        <span>{{selectedText}}</span>
+    </div>
+    <div class="ms-auto px-2">
+        <i style="font-size: 1.5rem; color: cornflowerblue;" (click)="onBtnExport()" class="bi bi-filetype-csv"></i>
+    </div>
+</div>
+<ag-grid-angular style="width: 100%; height: 500px;" class="ag-theme-alpine" [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef" [sideBar]="sideBarDef" [rowData]="rowData" (gridReady)="onGridReady($event)" rowSelection="multiple">
+</ag-grid-angular>

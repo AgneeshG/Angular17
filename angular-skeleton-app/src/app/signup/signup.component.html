@@ -1,0 +1,142 @@
+<div class="container mt-5">
+    <div class="row justify-content-md-center">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">
+                        <h2>Create Account</h2>
+                    </h5>
+                    <form class="mt-4" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" formControlName="email" id="email">
+                            <span *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched"
+                                class="help-block">
+                                <span *ngIf="signupForm.get('email').hasError('required')">Email is required</span>
+                                <span *ngIf="signupForm.get('email').hasError('isEmailInvalid')">Email is invalid</span>
+                                <span *ngIf="signupForm.get('email').hasError('emailExist')">Email already exist</span>                                
+                            </span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" formControlName="username" id="username">
+                            <span *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched"
+                                class="help-block">
+                                <span *ngIf="signupForm.get('username').hasError('required')">Username is required</span>
+                                <span *ngIf="signupForm.get('username').hasError('minlength')">Min 4 chars required</span>
+                                <span *ngIf="signupForm.get('username').hasError('maxlength')">Max 15 chars only allowed</span>
+                                <span *ngIf="signupForm.get('username').hasError('pattern')">Only alphanumeric is allowed</span>
+                                <span *ngIf="signupForm.get('username').hasError('usernameExist')">Username already exist</span>
+                            </span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mobile" class="form-label">Mobile No</label>
+                            <input type="text" class="form-control" formControlName="mobile" appPhoneMask id="mobile"
+                                maxlength="14">
+                            <span *ngIf="!signupForm.get('mobile').valid && signupForm.get('mobile').touched"
+                                class="help-block">
+                                <span *ngIf="signupForm.get('mobile').hasError('required')">Mobile no is required</span>
+                                <span *ngIf="signupForm.get('mobile').hasError('pattern')">Invalid mobile no</span>
+                            </span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" formControlName="password" id="password">
+                            <span *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched"
+                                class="help-block">
+                                <span *ngIf="signupForm.get('password').hasError('required')">Password is required</span>
+                                <span *ngIf="signupForm.get('password').hasError('minlength')">Min 5 chars required</span>
+                                <span *ngIf="signupForm.get('password').hasError('maxlength')">Max 20 chars only
+                                    allowed</span>
+                            </span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" formControlName="confirmPassword"
+                                id="confirmPassword">
+                            <span
+                                *ngIf="!signupForm.get('confirmPassword').valid && signupForm.get('confirmPassword').touched"
+                                class="help-block">
+                                <span *ngIf="signupForm.get('confirmPassword').hasError('required')">Confirm Password is
+                                    required</span>
+                                <span *ngIf="signupForm.get('confirmPassword').hasError('isPasswordNotMatched')">Confirm
+                                    password not matched</span>
+                            </span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="role" class="form-label">Role</label>
+                            <select class="form-select" formControlName="role" id="role">
+                                <option value="">Select</option>
+                                <option *ngFor="let role of roles; let i=index" [value]="role.value">{{role.label}}
+                                </option>
+                            </select>
+                            <span *ngIf="!signupForm.get('role').valid && signupForm.get('role').touched"
+                                class="help-block">
+                                <span *ngIf="signupForm.get('role').hasError('required')">Role is required</span>
+                            </span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="platform" class="form-label">Platform</label>
+                            <div>
+                                <div class="form-check form-check-inline mb-3"
+                                    *ngFor="let platform of platforms; let i=index">
+                                    <input class="form-check-input" type="checkbox" [name]="platform.value"
+                                        [id]="platform.value" [value]="platform.value"
+                                        (change)="onCheckboxChange($event)">
+                                    <label class="form-check-label" [for]="platform.value">{{platform.label}}</label>
+                                </div>
+                            </div>
+                            <span *ngIf="!signupForm.get('platforms').valid && signupForm.get('platforms').touched"
+                                class="help-block">
+                                <span *ngIf="signupForm.get('platforms').hasError('required')">Platform is required</span>
+                            </span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="gender" class="form-label">Gender</label>
+                            <div>
+                                <div class="form-check form-check-inline mb-3">
+                                    <input class="form-check-input" type="radio" formControlName="gender" name="gender"
+                                        id="male" value="male">
+                                    <label class="form-check-label" for="male">Male</label>
+                                </div>
+                                <div class="form-check form-check-inline mb-3">
+                                    <input class="form-check-input" type="radio" formControlName="gender" name="gender"
+                                        id="female" value="female">
+                                    <label class="form-check-label" for="female">Female</label>
+                                </div>
+                            </div>
+                            <span *ngIf="!signupForm.get('gender').valid && signupForm.get('gender').touched"
+                                class="help-block">
+                                <span *ngIf="signupForm.get('gender').hasError('required')">Gender is required</span>
+                            </span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="aboutyou" class="form-label">About You</label>
+                            <textarea class="form-control" formControlName="aboutyou" id="aboutyou" rows="3"></textarea>
+                            <span *ngIf="!signupForm.get('aboutyou').valid && signupForm.get('aboutyou').touched"
+                                class="help-block">
+                                <span *ngIf="signupForm.get('aboutyou').hasError('required')">About you is required</span>
+                            </span>
+                        </div>
+                        <div class="form-check form-check-inline mb-3">
+                            <input class="form-check-input" type="checkbox" formControlName="termsCondition"
+                                name="termsCondition" id="termsCondition">
+                            <label class="form-check-label" for="termsCondition">Accept Terms & Conditions</label>
+                            <div>
+                                <span
+                                    *ngIf="!signupForm.get('termsCondition').valid && signupForm.get('termsCondition').touched"
+                                    class="help-block">
+                                    <span *ngIf="signupForm.get('termsCondition').hasError('required')">Accept
+                                        terms & conditions is required</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="clearfix mb-3">
+                            <button type="submit" class="btn btn-primary float-end">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
