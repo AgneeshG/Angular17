@@ -1,0 +1,38 @@
+<h2>Welcome to hotelName = "{{hotelName}}"</h2>
+<div *ngIf="hideRooms">
+<p>availableRooms : </p>
+<div [innerText]="numOfRooms" [ngStyle]="{'color':Rooms.availableRooms>0 ? 'Blue' : 'Red'}"></div>
+</div>
+<button (click)="toggle()">Toggle</button>
+
+<br><br><br>
+
+
+<div *ngIf="Rooms.availableRooms>5">Rooms available : {{Rooms.availableRooms}}</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Room No.</th> <th>Price</th> <th>Available</th> <th>Even/Odd</th> <th>Checkin Time</th> <th>Checkout Time</th> 
+        </tr>
+    </thead>
+    <tbody>
+        @for (roomDetail of roomDetails; track roomDetail;) {
+            <tr [ngStyle]="{'backgroundColor': roomDetail.available ? 'aqua' : 'Red'}">
+                <td>{{roomDetail.roomNumber}}</td> <td>{{roomDetail.price | currency : 'INR'}}</td> <td>{{roomDetail.available}}</td> <td>{{ 'e' ? 'Even' : 'Odd'}}</td> <td>{{roomDetail.checkinTime | date}}</td> <td>{{roomDetail.checkoutTime}}</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<h1>ngSwitch Example</h1>
+<div [ngSwitch]="num" class="switchcase">
+<input type="text" [(ngModel)]="num">
+<div *ngSwitchCase="'z'">Zero</div>
+<div *ngSwitchCase="'o'">One</div>
+<div *ngSwitchCase="'t'">Two</div>
+<div *ngSwitchCase="'th'">Three</div>
+</div>
+
+

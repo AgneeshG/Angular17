@@ -1,0 +1,10 @@
+<p>temp works!</p>
+<h3>{{count}}</h3>
+<h3>{{message}}</h3>
+<h3>--- {{title}} ---</h3>
+
+<app-temp2 [pMesg]="parentMessage" (messageEvent)="receiveMessage($event)"></app-temp2>
+
+<h3>{{msgFromChild}}</h3>
+<button (click)="sendData()">send data to parent</button>
+

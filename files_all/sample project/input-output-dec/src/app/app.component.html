@@ -1,0 +1,10 @@
+<div class="cen">
+  <div>
+    <h3><u>Sharing data between two child components :</u></h3>
+    <h1>Add Customer</h1>
+    <app-customer-add (customerAdded)="getCustomers($event)"></app-customer-add>
+    <br><br><hr>
+    <h2>View customers</h2>
+    <app-customer-view [customers]="customer"></app-customer-view>
+  </div>
+</div>

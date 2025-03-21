@@ -1,0 +1,13 @@
+
+<h1>list works!</h1>
+<div *ngIf="carsList.length>0; then thenBlock; else elseBlock"></div>
+<ng-template #thenBlock>
+<ul>
+    @for(carName of carsList; track carName){
+        <li>{{carName}}</li>
+    }
+</ul>
+</ng-template>
+<ng-template #elseBlock>
+    <label>No data available</label>
+</ng-template>

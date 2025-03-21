@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<main role="main" class="container mt-5">
+  <div class="container">
+    <div class="text-center mt-5">
+      <h3>Dashboard page</h3>
+      <p class="text-bold" [innerText]="'Hi '+this.user.displayName+', your Firebase id is '+this.user.localId" ></p>
+      <img [src]="user.profilePhoto" alt="Profile Photo">
+      <img [src]="url" alt="" class="simage" >
+      <input type="file" (change)="onSelectFile($event)" name="" id="">
+      <p>photo : {{user.profilePhoto}}</p>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,12 @@
+<h1>form works!</h1>
+
+<form action="">
+    <label>Car Name: </label>
+    <input type="text" name="carname" [(ngModel)]="carName">
+    <button (click)="addCar()">submit</button>
+</form>
+
+
+<br><br>
+<hr>
+<app-list [carsInput]="cars"></app-list>

@@ -1,0 +1,47 @@
+
+
+  <!-- <mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>Choose a date</mat-label>
+    <input matInput id="dateinput" [matDatepicker]="picker" [(ngModel)]="date2" (dateInput)="setValue()">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"  panelClass="picker " ></mat-datepicker-toggle>
+    <mat-datepicker touchUi #picker></mat-datepicker>
+  </mat-form-field> -->
+
+
+
+  
+<!-- <p>Web Analytics Overview - {{year}}</p> -->
+
+
+<div >
+<div class="calendaricon">
+<button (click)="showCalendar()"  class="calendar-button"><mat-icon matDatepickerToggleIcon>calendar_today</mat-icon></button>
+</div>
+<div class="calendar">
+@if(showCalendarType){
+  <div class="floating-box">
+<button (click)="quarterly()" class="menu-button" [class.selected]="selectedButton === 'quarterly'" >Quarterly</button> 
+<button (click)="monthly()" class="menu-button" [class.selected]="selectedButton === 'monthly'" >Monthly</button>
+<button (click)="weekly()" class="menu-button" [class.selected]="selectedButton === 'weekly'">Weekly</button>
+<button (click)="daily()" class="menu-button" [class.selected]="selectedButton === 'daily'">Daily</button> 
+</div>
+}
+@if(viewQuarterlyCalendar == true || viewMonthlyCalendar == true){
+<mat-form-field appearance="fill">
+  <mat-label>Year</mat-label>
+  <input matInput [matDatepicker]="yearPicker" (dateChange)="onDateChange($event)" [(ngModel)]="year" >
+  <mat-datepicker #yearPicker startView="multi-year" (yearSelected)="onYearSelected($event, yearPicker)" panelClass="year-picker"></mat-datepicker>
+  <mat-datepicker-toggle matSuffix [for]="yearPicker"></mat-datepicker-toggle>
+</mat-form-field>
+}
+@if(viewWeeklyCalendar == true || viewDailyCalendar == true){
+<mat-form-field appearance="fill">
+  <mat-label>Month</mat-label>
+  <input matInput [matDatepicker]="monthPicker" (dateChange)="onDateChange($event)" [(ngModel)]="month">
+  <mat-datepicker #monthPicker startView="year" (monthSelected)="onMonthSelected($event, monthPicker)" panelClass="month-picker"></mat-datepicker>
+  <mat-datepicker-toggle matSuffix [for]="monthPicker"></mat-datepicker-toggle>
+</mat-form-field>
+}
+</div>
+</div>

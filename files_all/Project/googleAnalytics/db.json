@@ -1,0 +1,33 @@
+{
+    "2020": {
+      "total_sales": 10000,
+      "monthly_sales": {
+        "Jan": 800,
+        "Feb": 750,
+        "Mar": 920
+      },
+      "average_order_value": 50,
+      "customer_count": 200
+    },
+    "2021": {
+      "total_sales": 12500,
+      "monthly_sales": {
+        "Jan": 1000,
+        "Feb": 980,
+        "Mar": 1100
+      },
+      "average_order_value": 60,
+      "customer_count": 250
+    },
+    "2022": {
+      "total_sales": 15200,
+      "monthly_sales": {
+        "Jan": 1200,
+        "Feb": 1150,
+        "Mar": 1300
+      },
+      "average_order_value": 65,
+      "customer_count": 300
+    }
+  }
+  

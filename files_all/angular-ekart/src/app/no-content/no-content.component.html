@@ -1,0 +1,10 @@
+<div class="card">
+    <ng-content *ngIf="title1" select="[title]"></ng-content>
+    <ng-content *ngIf="body1" select="[body]"></ng-content>
+    <ng-content *ngIf="default1" select="[default]"></ng-content>
+
+</div>
+<input type="text" name="" id="" [(ngModel)]="setvalue">
+<button >set -- click</button>
+<button (click)="getvalue()">get -- click</button>
+ 

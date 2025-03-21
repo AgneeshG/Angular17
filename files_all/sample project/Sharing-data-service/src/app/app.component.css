@@ -1,0 +1,8 @@
+.cen{
+    /* justify-content: center; */
+    width: 800px; 
+    height: 100px;
+    /* text-align: center; */
+    margin-left: auto;
+    margin-top: 200px;
+}

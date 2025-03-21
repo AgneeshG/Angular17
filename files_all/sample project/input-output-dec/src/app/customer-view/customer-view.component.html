@@ -1,0 +1,8 @@
+@if (customers.length==0) {
+    <p> - Empty - </p>
+}
+<ol>
+    @for (item of customers; track $index) {
+        <li>{{item.name}}</li>
+    }
+</ol>

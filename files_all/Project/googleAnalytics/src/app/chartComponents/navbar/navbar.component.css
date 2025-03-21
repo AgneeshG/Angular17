@@ -1,0 +1,23 @@
+.rtnavbar_contain{
+    padding: 15px;
+    background-color: rgb(222, 226, 226);
+}
+.nav-links{
+    padding-left: 600px;
+}
+a{
+    padding: 13px;
+    color: black;
+    size: 20px;
+}
+a:hover {
+    background-color: #b5c7cc;
+    color: black;
+    border: 0.5px solid white;
+    text-decoration: solid;
+    border-radius: 12px;
+}
+a.active{
+    background-color: white;
+    text-decoration-style: solid;    
+}

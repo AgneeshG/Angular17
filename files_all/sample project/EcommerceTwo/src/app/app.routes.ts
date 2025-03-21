@@ -1,0 +1,27 @@
+import { Routes } from '@angular/router';
+import { LoginComponent } from './pages/admin/login/login.component';
+import { LayoutComponent } from './pages/admin/layout/layout.component';
+import { ProductsComponent } from './pages/admin/products/products.component';
+import { CatagoriesComponent } from './pages/admin/catagories/catagories.component';
+import { LandingComponent } from './pages/website/landing/landing.component';
+import { CategoryProductsComponent } from './pages/website/category-products/category-products.component';
+import { WebProductsComponent } from './pages/website/web-products/web-products.component';
+
+export const routes: Routes = [
+    {path:"",redirectTo:'/shop', pathMatch:"full"},
+    {path:'login', component:LoginComponent},
+    {path:'', component:LandingComponent,
+        children:[
+            {path:'shop', component:WebProductsComponent},
+            {path:'categoryproducts/:id', component:CategoryProductsComponent},
+        ]
+    },
+    {path:"",component:LayoutComponent,
+        children:[
+            {path:'products',component:ProductsComponent},
+            {path:'category',component:CatagoriesComponent}
+            
+        ]
+    }
+
+];

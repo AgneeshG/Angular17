@@ -1,0 +1,6 @@
+<h2>My current Tasks ({{taskList.length}})</h2>
+<ul>
+    @for (task of taskList; track $index) {
+      <li class="d-flex my-3 py-2 px-3">{{task}} <button class="btn btn-outline-danger" (click)="removeTask($index)">Delete</button></li>
+    }
+</ul>

@@ -1,0 +1,72 @@
+.mat-calendar .mat-calendar-period-button {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  /* Style for the calendar button */
+.calendar-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.3s;
+  }
+  
+  .calendar-button:hover {
+    background: #f0f0f0;
+  }
+  
+  /* Style for the floating box */
+  .floating-box {
+    position: absolute;
+    top: 50px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    margin-left: 1150px;
+  }
+  
+  /* Style for the menu buttons inside the floating box */
+  .menu-button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .menu-button:hover {
+    background: #f0f0f0;
+  }
+  
+  .menu-button:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .calendaricon{
+    margin-left: 1330px;
+  }
+  .calendar{
+    margin-left: 900px;
+  }
+
+  .calendaricon, .calendar{
+    display: inline-flex;
+    flex-direction:row-reverse;
+
+  }
+
+  .menu-button.selected {
+    background-color: #007bff; /* Example highlight color */
+    color: white; /* Example text color */
+    /* You can add more styles to highlight the button */
+  }
+

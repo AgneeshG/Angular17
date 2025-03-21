@@ -1,0 +1,48 @@
+
+.row{
+    display: inline-flex;
+    flex-direction:row;
+    width: 250px;
+    height: 250px;
+    margin-left: 5px;
+    padding-bottom: 5px;
+}
+.row-1{
+
+    width: 450px;
+    height: 280px;
+    margin-left: 5px;
+    padding-bottom: 5px;
+}
+.chart1{
+    width: 450px;
+    display: inline-flex;
+    flex-direction:row;
+    padding-left: 25px;
+}
+.charthead{
+    padding-bottom: 5px;
+    height: 30px;
+    padding: 3px;
+}
+/* .bycity{
+    text-align: center;
+} */
+.devicecharts{
+    padding-left: 25px;
+}
+.devicechart{
+    size: 24px;
+}
+nav{
+    padding: 15px;
+}
+.p1{
+    size: 24px;
+}
+.loadchart{
+    padding: 3px;
+    border-radius : 4px;
+    margin-left: 1300px;
+    /* margin-bottom: 10px; */
+}

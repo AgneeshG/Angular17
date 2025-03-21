@@ -1,0 +1,16 @@
+.product-count {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-count label {
+    margin-right: 10px; /* Adjust spacing between label and count */
+    font-weight: bold; /* Make the label bold */
+  }
+  
+  .product-count .count {
+    background-color: #f0f0f0; /* Add background color to count */
+    padding: 5px 10px; /* Add padding to count */
+    border-radius: 5px; /* Add rounded corners to count */
+  }
+  

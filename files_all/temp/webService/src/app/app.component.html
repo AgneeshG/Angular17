@@ -1,0 +1,19 @@
+<!-- <p>{{tempService.count}}</p> -->
+<!-- {{tempService.count}}
+<h3>{{tempService.add()}}</h3> -->
+<br><br>
+<input type="button" value="app_incre" (click)="appincrement()">
+<h3>{{this.tempService.count}}</h3>
+<hr>
+<app-two *ngIf="show" [refVar]="title"></app-two>
+<hr>
+<input type="text" name="" [(ngModel)]="title" id="">
+<button (click)="toggle()">toggle two</button>
+
+<hr>
+
+<app-three></app-three>
+<four></four>
+<button (click)="showfunc()">Three</button>
+<button (click)="showfunc()">Four</button>
+<ng-template host></ng-template>

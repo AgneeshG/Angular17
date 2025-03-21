@@ -1,0 +1,122 @@
+<app-navbar></app-navbar>
+<nav>
+<h4 class="navone">Web Analytics Overview - Month:{{monthvalue}}  Year:{{yearvalue}}</h4>
+
+    <app-calendar4></app-calendar4>
+    <div>
+        <app-sam-calendar></app-sam-calendar>
+    </div>
+    <button class="loadchart" (click)="loadChartData()">Load Chart</button>
+</nav>
+<app-header></app-header>
+<hr>
+
+
+    <div class="total-page-inter">
+        <!------------------- Total Visits ------------------->
+        <div class="chart1">
+            <div>
+                <div class="charthead">
+                    <div class="innercontent"><b>Total Visits</b> </div>
+                </div>
+                <div class="row-1">
+                    <canvas id="totalvisits"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!------------------- Page Views ------------------->
+        <div class="chart1">
+            <div>
+                <div class="charthead">
+                    <div class="innercontent"><b>Page Views</b></div>
+                </div>
+                <div class="row-1">
+                    <canvas id="pageviews"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!------------------- Interaction Per Visit ------------------->
+        <div class="chart1">
+            <div>
+                <div class="charthead">
+                    <div class="innercontent"><b>Interaction Per Visit</b></div>
+                </div>
+                <div class="row-1">
+                    <canvas id="interaction"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <br>
+    </div>
+
+
+    <div class="con-top5-city">
+        <!------------------- Conversion Rate By Source ------------------->
+        <div class="chart1">
+            <div>
+                <div class="charthead">
+                    <div class="innercontent"><b>Conversion Rate By Source </b></div>
+                </div>
+                <div class="row-1">
+                    <canvas id="Conversionrate"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!------------------- Top Five Pages CHART ------------------->
+        <div class="chart1">
+            <div>
+                <div class="charthead">
+                    <div class="innercontent"><b>Top 5 Pages</b></div>
+                </div>
+                <div class="row-1">
+                    <canvas id="topfive"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!------------------- BY CITY CHART ------------------->
+        <div class="chart1">
+            <div>
+                <div class="charthead">
+                    <div class="innercontent"><b>By City</b></div>
+                </div>
+                <div class="bycity">
+                    <canvas id="bycity"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <br>
+    </div>
+
+
+    <!------------------- DEVICE CHART ------------------->
+    <div class="devicecharts">
+        <div><b>By Device</b></div>
+        <div class="row">
+            <div class="col-lg-6">
+                <canvas id="devicechart-desktop"></canvas>
+
+                <p *ngIf="this.bydevice_desktop!=null" class="devicechart"><b>{{this.ByDevice.desktop}}%</b></p>
+                <p>Desktop</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <canvas id="devicechart-tablet"></canvas>
+                <p *ngIf="this.bydevice_desktop!=null" class="devicechart"><b>{{this.ByDevice.tablet}}%</b></p>
+                <p>Tablet</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <canvas id="devicechart-mobile"></canvas>
+                <p *ngIf="this.bydevice_desktop!=null" class="devicechart"><b>{{this.ByDevice.mobile}}%</b></p>
+                <p>Mobile</p>
+            </div>
+        </div>
+    </div>

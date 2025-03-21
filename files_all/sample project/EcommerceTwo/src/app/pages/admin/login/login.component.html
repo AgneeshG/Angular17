@@ -1,0 +1,20 @@
+
+<div class="parent">
+    <div class="container">
+        <div class="login-container">
+            <h1>Login</h1>
+            <form action="#" class="form-login">
+                <div class="textfield">
+                    <label for="email"> E-mail</label>
+                    <input type="email" [(ngModel)]="loginObj.username" name="username" placeholder="E-mail">
+                </div>
+                <div class="textfield">
+                    <label for="password">Password</label>
+                    <input type="password" [(ngModel)]="loginObj.password" name="password" placeholder="password">
+                </div>
+                <a class="forgot-password" href="#">Forget password</a>
+                <button class="btn-login" (click)="onLogin()" type="button">Login</button>
+            </form>
+        </div>
+    <div>
+</div>
