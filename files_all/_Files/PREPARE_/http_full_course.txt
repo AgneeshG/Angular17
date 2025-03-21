@@ -1,0 +1,20 @@
+		----------- HTTP Full Course --------------
+
+1. What is Angular?
+	An application design framework and development platform for creating efficient and sophisticated client-side 
+single-page applications. 
+
+2. What is HTTP?
+	A protocal which allows the fetching of resources, such as html documents, from a web server. It is the 
+foundaton of data communication for the World Wide Web.
+
+3. RESTful Web Service
+	REST Architecture based Web Services.
+	RESTful web services are light weight, highly scalable and maintainable and very commonly used to create APIs for
+web based applications.
+
+RESTful CRUD and HTTP :
+Create - POST - retrun 201 if successful
+Read   - Get  - return 200 if successful
+Update - Put/Patch - return 204 if successful
+Delete - Delete - return 204 if successful

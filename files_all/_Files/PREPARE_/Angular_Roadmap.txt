@@ -1,0 +1,103 @@
+ FUNDAMENTALS : 
+	TypeScript
+	Angular CLI
+	NgModules
+	
+	Components :
+		Class
+		Template
+		Metadata
+	Template Syntax :
+		InterPolation
+		Property Binding
+		Event Binding
+		Pipes
+		Template Reference Variables
+	
+	6. Directives :
+		Component
+		Structural
+			ngIf
+			ngSwitch
+			ngFor
+		Attribute
+			ngClass
+			ngStyle
+
+	7. Component Styling :
+		Class Binding
+		Style Binding
+
+	8. Component Interaction :
+		Input
+		Output
+
+	
+	9. Lifecycle Methods
+
+
+ADVANCED :
+	Services :
+		Depedency Injection
+		Providing Services
+	
+	Observables :
+		Creating Observables
+		Subscribing to Observables
+		Executing Observables
+		Disposing Observables
+		Operators
+
+	HTTP Client :
+		HttpClient
+		GET, POST, PUT & DELETE
+		Typed Response
+		Error Handling
+		Interceptors
+
+	Forms :
+		Template Driven Forms
+			FormsModule
+			NgForm
+			NgModel
+			NgModelGroup
+			Tracking State & validity
+			Validation & Error Messages
+			ngSubmit
+		Reactive Forms
+			ReactiveFormsModel
+			FormControl
+			FormGroup
+			setValue & patchValue
+			FormBuilder Service
+			Validator Functions
+			FormArray
+			ngSubmit
+
+	Routing :
+		RouterModule
+		Configuring Routes
+		RouterOutlet
+		routerLink
+		Wildcard Routes
+		Redirecting Routes
+		Route Parameters
+		Nested Routes
+		Reactive Paths
+		Lazy Loading Routes
+		Route Guards
+	Animations :
+
+ECOSYSTEM :
+	State Management :
+		ngRx
+	UI Library
+		Angular material
+	Server Side Rendering :
+		Angular Universal
+	Testing :
+		Jasmine & karma
+		protractor
+	Miscellaneous :
+		i18n
+		Accessibility

@@ -1,0 +1,149 @@
+1. Standalone components (no app.module.ts)
+2. to create angular application without standalone - (ng new appName --no-standalone)
+3. String interpolation - {{ variable name }}
+4. Data binding - [oneway binding, two way binding]
+   one way binding(using string interpolation) - {{ value }}, {{ functionName() }}
+   two way binding - [(ngModel)]="variable name"
+5. Property binding -  <h1[innerText]="variable name"></h1> 
+		       <button [disabled]="isDisabled">Click me!</button>
+6. Event Bindind - <button (click)="onSave()">Save</button>
+	function:-
+	    clickCount:number = 0;
+	    clickMe(){
+		this.clickCount++;
+		}
+	
+	html page:-
+	    <h1>clicked {{clickCount}} times</h1>
+	    <button (click)="clickMe()"> Increment </button>
+
+
+7. Directives - Changes behavior, appearance or layout of the Elements
+	Component directives : components also a directive
+	
+	Structural directive : *ngFor, *ngIf
+
+	Attribute directive : Changes appearance and behaviour
+		[ngClass]="['primary','colorRed','samllText']", [ngClass]="{'primary':true, 'colorBue':'varName'}"
+		[ngStyle]="{'color':'yellow', 'font-size':'24px'}", [ngStyle]="{'font-size':'varName', 'color':'varName'}"
+
+
+8. Pipes :
+	Date pipe:
+		<p>{{varName | date}}</p>, output: Thu Jul 25 2024 16:11:37 GMT+0530 (India Standard Time)
+		<p>{{varName | date:'medium'}}</p>, output: Jul 25, 2024, 4:11:37 PM
+		<p>{{varName | date:'short'}}</p>, output: 7/25/24, 4:11 PM
+		<p>{{varName | date:'fullDate'}}</p>, output: Thursday, July 25, 2024
+
+	Upper case and Lower case pipe:
+		<p>Upper case : {{varName | uppercase}}</p>, output : WELCOME
+		<p>Lower case : {{varName | lowercase}}</p>, output : hello
+
+	Slice pipe : 
+		<p>Slice pipe {{varName | slice:0:7}}, output : Welcome
+		<p>Slice pipe with array</p> --- <ul><li *ngFor="let item of items | slice:0:4">{{item}}</li></ul>
+
+	currency pipe :
+		<p>currency pipe {{varName | currency}}</p>, output : $340.00
+		<p>currency pipe {{varName | currency:'INR'}}</p>, output : ₹340.00
+
+
+9. Input and Output decorator:
+	Output:
+	    Form component html:
+		<div>
+		<input type="text" [(ngModel)]="carName">
+		<button type="submit" (click)="onSubmit()">Submit</button>
+		</div>
+	    Form component ts:
+		carName:string = ""
+		@Output() carNameToAppComp = new EventEmitter<string>()
+		onSubmit(){
+		console.log(this.carName)
+		this.carNameToAppComp.emit(this.carName)
+		this.carName = ""
+		}
+
+	    App component html:
+		<app-form (carNameToAppComp)="getCarName($event)"></app-form>
+	    App component ts:
+		carsList:string[]=[]
+		getCarName(carName:string){
+		console.log(carName, "from app comp")
+		this.carsList.push(carName)
+		}
+
+	Input:
+	    App component html:
+		<app-list [carsList]="carsListFromForm"></app-list>
+	    List component html:
+		<div>
+		@if(carsList.length>0){
+		<ul>
+		<li *ngFor="let car of carsList">{{car}}</li>
+		</ul>
+		} @else {
+		<p>No cars available!</p>
+		}
+		</div>
+	    List component ts:
+		@Input() carsListFromForm:string[] = []
+
+
+10. Service  
+
+11. Life cycle hooks:
+	 ngOnChanges: 
+	 	 The 'ngOnChanges' lifecycle hook in Angular is essential for handling changes to input properties.
+	 By implementing this hook, you can easily respond to input changes and perform necessary updates or actions
+	 within your component.
+	
+	 ngOnInit:
+		 The ngOnInit lifecycle hook in Angular is essential for performing initialization logic in a component.
+	 By implementing this hook, you can ensure that any setup or data fetching logic runs after the component's
+	 inputs have been initialized.
+
+	 ngDoCheck:
+
+
+12. HTTPClient :
+	 HTTPMethods
+	 	GET : Read Data
+		POST : Create new data
+		PUT : Replace existing data
+		PATCH : Modify existing data
+		DELETE : Delete data
+
+
+
+
+
+
+
+
+
+
+
+OBSERVABLES :
+	- Multiple values
+	- Cancellable
+	- Operators - Map,filter,reduce
+	- Observables can be retried using retry and retryWhen operators
+
+	RxJS - Pipe
+	RxJS -Tap
+	Error Operators	
+
+	Dependency Injection:
+		constructor(private userService: UserService){}   --- injecting service
+
+
+PROMISE VS OBSERVABLE :
+		- Promises represents a single value but in observable takes more than one value
+		- Promises are async but observable sync / async
+
+ROUTING :
+	export const routes:Routes = [
+		{path:'hello', component:helloComponent},
+		{path:'home', component:homeComponent}
+	]

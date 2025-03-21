@@ -1,0 +1,26 @@
+Angular questions :- (Created at 18/2/2025)
+
+  -------------- Ui Dev Guide - youtube - 3 years experience -------------
+1. What are the new features in Angular 17?  
+2. What are the types of pipes we have in angular? 
+3. Can we use multiple Router Outlet in Angular?  
+4. You might hear about Navigation and Navigatedurl  
+5. What is the difference between Relative path and Absolute path?  
+6. What is difference in Promise and Observer   
+7. You might have seen the TS configuration file what is the use of that file?  
+8. You might have been seen the angular.json file. when we do ng build or ng serve, what exactly happens? 
+   8.2. doing Environment specific build and development build
+9. Can we call one of a service without adding in the constructor?
+10.Have you heard about Interceptor?
+11. Can we use multiple Router Outlet in angular?
+12. What is common are RxJS to use operator in Angular?
+13. What is tech operator and tap operator?
+14. Have you used Share Replay?
+15. I have subject or behavioral subject, how to unsubscribe?  
+16. If i want to do automatic unsubscribe, then what should i use?
+17. What is the disadvantage of async pipe?
+18. is an aynce pure pipe or impure pipe? so you have you do you know about pipe operator?
+19. What the replaysubject do?
+20. So have you written any test cases?
+21. Have you used a fork join?
+22. Have you used content projection in angular?

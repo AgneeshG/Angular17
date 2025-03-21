@@ -1,0 +1,20 @@
+<router-outlet></router-outlet>
+
+<div>
+  <app-form></app-form>
+  <app-list></app-list>
+</div>
+
+<hr>
+<h1>Input and Output decorator</h1>
+<div>
+  <app-form-inout (carNameToApp)="getCarList($event)"></app-form-inout>
+  <app-list-inout [carListFromApp]="carNameList"></app-list-inout>
+</div>
+
+<hr>
+<h1>Service</h1>
+<div>
+<app-form-ser></app-form-ser>
+<app-list-ser></app-list-ser>
+</div>

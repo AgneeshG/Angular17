@@ -1,0 +1,109 @@
+   ----  ChatGPT  ----
+For an Angular developer fresher, interview questions will likely cover a mix of theoretical knowledge, practical understanding, and problem-solving skills. Here are some common questions:
+
+---  Basic Concepts:  ---
+1. What is Angular and why is it used?
+2. What are the main features of Angular?
+3. Explain the architecture of an Angular application.
+
+---  TypeScript:  ---
+4. What is TypeScript and how is it different from JavaScript?
+5. What are the main features of TypeScript?
+6. How do you define and use interfaces in TypeScript?
+
+---  Angular CLI:  ---
+7. What is Angular CLI and how do you use it?
+8. How do you create a new Angular project using the CLI?
+9. What are some common Angular CLI commands?
+
+---  Components:  ---
+10. What is a component in Angular?
+11. How do you create a component in Angular?
+12. What are lifecycle hooks in Angular? Can you name a few?
+13. How do you pass data between parent and child components?
+
+---  Templates:  ---
+14. What is data binding in Angular?
+15. Explain the different types of data binding (Interpolation, Property binding, Event binding, Two-way binding).
+16. What are template reference variables in Angular?
+
+---  Directives:  ---
+17. What are directives in Angular?
+18. What is the difference between structural directives and attribute directives?
+19. How do you create a custom directive in Angular?
+ 
+---  Services and Dependency Injection:  ---
+20. What are services in Angular and why are they used?
+21. How do you create and use a service in Angular?
+22. What is dependency injection in Angular?
+
+---  Modules:  ---
+23. What is an NgModule in Angular?
+24. What is the purpose of the AppModule?
+25. How do you implement lazy loading in Angular?
+
+---  Routing and Navigation:  ---
+26. How do you configure routing in an Angular application?
+27. What are route parameters and how do you use them?
+28. What are route guards and why are they used?
+
+---  Forms:  ---
+29. What is the difference between template-driven forms and reactive forms?
+30. How do you implement form validation in Angular?
+31. How do you handle form submission in Angular?
+
+---  HTTP Client:  ---
+32. How do you make HTTP requests in Angular?
+33. How do you handle HTTP responses and errors?
+34. What are interceptors and how do you use them in Angular?
+
+---  Pipes:  ---
+35. What are pipes in Angular and how do you use them?
+36. How do you create a custom pipe in Angular?
+37. What are some built-in pipes in Angular?
+
+---  State Management:  ---
+38. What is state management in Angular?
+39. Have you used any state management libraries like NgRx? If so, explain your experience.
+
+---  Testing:  ---
+40. What is unit testing and why is it important?
+41. How do you write unit tests for components and services in Angular?
+42. What is end-to-end testing and how do you perform it in Angular?
+
+---  Performance Optimization:  ---
+43. What are some best practices for optimizing the performance of an Angular application?
+44. What is lazy loading and how does it improve performance?
+45. What is the role of the ChangeDetectionStrategy in Angular?
+
+---  Build and Deployment:  ---
+46. How do you build an Angular application for production?
+47. What are some common deployment strategies for Angular applications?
+
+---  Version Control:  ---
+48. What is Git and why is it used?
+49. How do you use Git with an Angular project?
+50. What are some common Git commands you have used?
+
+---  Basic Web Development Concepts:  ---
+51. What are RESTful APIs and how do you consume them in Angular?
+52. Explain the basic structure of an HTML document.
+53. How do you apply styles in an Angular application?
+
+---  Practical Questions:  ---
+54. Can you walk me through a project you have worked on using Angular?
+55. Can you demonstrate how to create a simple Angular application that fetches data from an API and displays it?
+56. How would you debug an Angular application if something is not working as expected?
+
+
+
+
+
+
+
+
+
+
+
+
+

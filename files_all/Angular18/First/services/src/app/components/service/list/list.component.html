@@ -1,0 +1,10 @@
+<div>
+    <h3>Cars List :</h3>
+    @if(carListFromApp.length>0){
+         <ul>
+            <li *ngFor="let car of carListFromApp">{{car}}</li>
+         </ul>
+    } @else {
+        <p>No cars available!</p>
+    }
+</div>

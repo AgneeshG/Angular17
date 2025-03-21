@@ -1,0 +1,134 @@
+  ----  CHATGPT  ----
+For an Angular fresher interview, the topics should cover both fundamental and intermediate concepts. Here's a comprehensive list:
+
+  ---  Basic Concepts:  ---
+ 
+1. Introduction to Angular
+ What is Angular?
+ Key features of Angular
+
+
+2. TypeScript
+ Basics of TypeScript
+ TypeScript vs JavaScript
+ Data types, classes, interfaces
+
+3. Angular CLI
+ Installing Angular CLI
+ Creating a new project
+ Angular CLI commands
+
+
+  ---  Core Angular Concepts:  ---
+
+4. Components
+ Creating components
+ Component lifecycle hooks
+ @Input and @Output decorators
+
+5. Templates
+ Template syntax
+ Data binding (Interpolation, Property binding, Event binding, Two-way binding)
+
+6. Directives
+ Structural directives (*ngIf, *ngFor)
+ Attribute directives (ngClass, ngStyle)
+ Custom directives
+
+7. Services and Dependency Injection
+ Creating and using services
+ Dependency injection in Angular
+
+8. Modules
+ NgModules
+ Lazy loading modules
+
+
+  ---  Advanced Topics:  ---
+
+9. Routing and Navigation
+ Setting up routes
+ Route parameters
+ Child routes
+ Route guards
+
+10. Forms
+ Template-driven forms
+ Reactive forms
+ Form validation
+
+11. HTTP Client
+ Making HTTP requests
+ Handling HTTP responses
+ Error handling with HTTP client
+
+12. Pipes
+ Built-in pipes
+ Creating custom pipes
+
+13. State Management
+ Basics of state management in Angular
+ Introduction to NgRx (optional for a fresher)
+
+
+  ---  Testing:  ---
+
+14. Unit Testing
+ Basics of unit testing
+ Writing tests for components and services
+ Testing tools (Jasmine, Karma)
+
+15. End-to-End Testing
+ Basics of e2e testing
+ Using Protractor for e2e testing
+
+
+  ---  Miscellaneous:  ---
+16. Performance Optimization
+ Best practices for performance
+ Lazy loading modules and components
+ Change detection strategy
+
+17. Build and Deployment
+ Building the Angular app
+ Deployment strategies
+
+18. Version Control
+ Basic Git commands
+ Using Git with Angular projects
+
+19. Basic Web Development Concepts
+ HTML, CSS, and JavaScript fundamentals
+ Understanding of RESTful APIs
+
+
+  ---  Practical Questions:  ---
+
+20. Hands-on Coding
+ Simple tasks like creating components, services, and implementing basic features
+ Debugging and fixing small issues
+
+21. Project Discussion
+ Explanation of any projects they might have worked on, focusing on their role and the technologies used
+
+
+
+____________________________________________________________________________________________________________________________________
+
+My Topics : 
+
+1. Synchronuous and Asynchronous 
+2. Observable 
+3. BehaviorSubject
+
+
+
+
+
+
+
+
+
+____________________________________________________________________________________________________________________________________
+
+

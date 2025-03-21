@@ -1,0 +1,10 @@
+JAVA SCRIPT TOPICS : 
+
+1. Variables
+2. Arithmetic operators
+3. Accept user input (prompt and getElementById)
+4. Type conversion
+5. Constants
+6. Math object (Math.max)
+7. Generate randon numbers (Math.randon())
+8. if statements
